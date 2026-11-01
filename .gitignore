@@ -13,3 +13,6 @@ build/
 .DS_Store
 Thumbs.db
 
+
+# SDD 测试账号信息（敏感，不提交）
+docs/spec/info.md
