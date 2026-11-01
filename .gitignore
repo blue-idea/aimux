@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+ui/node_modules/
+vendor/
+
+# Production builds
+dist/
+ui/dist/
+build/
+
+# Logs & temp
+*.log
+.DS_Store
+Thumbs.db
+
