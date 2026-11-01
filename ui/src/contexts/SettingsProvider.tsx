@@ -1,14 +1,19 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { createDefaultSettings, type WorkspaceSettings } from '@/lib/settings';
 import { translate, type MessageKey } from '@/lib/i18n';
-import { loadCloudSettings, loadLocalSettings, saveCloudSettings, saveLocalSettings } from '@/lib/settingsStorage';
+import {
+  loadCloudSettings,
+  loadLocalSettings,
+  saveCloudSettings,
+  saveLocalSettings,
+} from '@/lib/settingsStorage';
 import { SettingsContext, type SyncStatus, type SettingsContextValue } from './settingsContext';
 
 const CLOUD_SAVE_DELAY_MS = 800;
 
 export function SettingsProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<WorkspaceSettings>(
-    () => loadLocalSettings() ?? createDefaultSettings(),
+    () => loadLocalSettings() ?? createDefaultSettings()
   );
   const [syncStatus, setSyncStatus] = useState<SyncStatus>('idle');
   const cloudLoaded = useRef(false);
@@ -58,13 +63,14 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const t = useCallback(
-    (key: MessageKey, params?: Record<string, string | number>) => translate(settings.locale, key, params),
-    [settings.locale],
+    (key: MessageKey, params?: Record<string, string | number>) =>
+      translate(settings.locale, key, params),
+    [settings.locale]
   );
 
   const value = useMemo<SettingsContextValue>(
     () => ({ settings, updateSettings, syncStatus, t }),
-    [settings, updateSettings, syncStatus, t],
+    [settings, updateSettings, syncStatus, t]
   );
 
   return <SettingsContext.Provider value={value}>{children}</SettingsContext.Provider>;

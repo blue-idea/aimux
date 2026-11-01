@@ -56,7 +56,7 @@ export function formatSingleViewportMarkdown(input: SingleViewportExportInput): 
  */
 export function formatAllViewportsMarkdown(
   viewports: ViewportExportItem[],
-  timestamp?: string,
+  timestamp?: string
 ): string {
   const exportTime = timestamp || new Date().toISOString();
   const lines: string[] = [];
@@ -123,4 +123,3 @@ export async function copyMarkdownToClipboard(content: string): Promise<boolean>
     return false;
   }
 }
-

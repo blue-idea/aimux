@@ -7,6 +7,9 @@ vendor/
 dist/
 ui/dist/
 build/
+bin/
+aimux
+aimux.exe
 
 # Logs & temp
 *.log

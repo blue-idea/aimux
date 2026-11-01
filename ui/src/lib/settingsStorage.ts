@@ -37,7 +37,7 @@ export async function saveCloudSettings(settings: WorkspaceSettings): Promise<vo
       settings,
       updated_at: new Date().toISOString(),
     },
-    { onConflict: 'device_id' },
+    { onConflict: 'device_id' }
   );
   if (error) throw new Error(error.message);
 }

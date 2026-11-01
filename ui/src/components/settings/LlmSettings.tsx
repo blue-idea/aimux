@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Bot, CheckCircle2, AlertCircle, Loader2, RefreshCw } from 'lucide-react';
+import { Bot, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import {
   type LlmApiConfig,
   type LlmProviderType,
@@ -88,7 +88,8 @@ export function LlmSettings() {
         <div>
           <h3 className="text-base font-semibold">LLM API Service</h3>
           <p className="mt-1 text-xs text-[var(--muted)]">
-            Configure third-party (OpenAI/DeepSeek) or local (Ollama/LM Studio) LLM endpoints for prompt assistance.
+            Configure third-party (OpenAI/DeepSeek) or local (Ollama/LM Studio) LLM endpoints for
+            prompt assistance.
           </p>
         </div>
         <button
@@ -134,7 +135,9 @@ export function LlmSettings() {
               }
               className="mt-1 w-full rounded-lg border border-[rgb(var(--ink-rgb)/0.12)] bg-[rgb(var(--ink-rgb)/0.04)] px-3 py-1.5 text-xs focus:border-[var(--accent)] focus:outline-none"
             >
-              <option value="openai">OpenAI Compatible (OpenAI, DeepSeek, OpenRouter, LM Studio)</option>
+              <option value="openai">
+                OpenAI Compatible (OpenAI, DeepSeek, OpenRouter, LM Studio)
+              </option>
               <option value="ollama">Ollama (Local /api/chat)</option>
               <option value="custom">Custom Endpoint</option>
             </select>
@@ -177,7 +180,8 @@ export function LlmSettings() {
         <div>
           <div className="flex items-center justify-between">
             <label className="text-xs font-medium text-[var(--muted)]">
-              Temperature: <span className="font-mono text-[var(--text)]">{config.temperature}</span>
+              Temperature:{' '}
+              <span className="font-mono text-[var(--text)]">{config.temperature}</span>
             </label>
           </div>
           <input
@@ -235,4 +239,3 @@ export function LlmSettings() {
     </div>
   );
 }
-

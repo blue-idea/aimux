@@ -37,8 +37,7 @@ export const THEMES: Theme[] = [
     muted: '#475569',
     accent: '#2563EB',
     accent2: '#0EA5E9',
-    wallpaper:
-      'radial-gradient(circle at 15% 10%, rgba(37,99,235,0.18), transparent 45%), #e2e8f0',
+    wallpaper: 'radial-gradient(circle at 15% 10%, rgba(37,99,235,0.18), transparent 45%), #e2e8f0',
   },
   {
     id: 'cyberpunk',
@@ -73,8 +72,7 @@ export const THEMES: Theme[] = [
     muted: '#FDBA74',
     accent: '#F97316',
     accent2: '#FB7185',
-    wallpaper:
-      'radial-gradient(circle at 80% 15%, rgba(249,115,22,0.3), transparent 45%), #140c10',
+    wallpaper: 'radial-gradient(circle at 80% 15%, rgba(249,115,22,0.3), transparent 45%), #140c10',
   },
   {
     id: 'sage',

@@ -49,8 +49,16 @@ export function FloatingPromptWindow({ children }: FloatingPromptWindowProps) {
     const container = element?.offsetParent;
     if (!drag || !element || !(container instanceof HTMLElement)) return;
     setPosition({
-      x: clamp(drag.originX + event.clientX - drag.pointerX, 0, container.clientWidth - element.offsetWidth),
-      y: clamp(drag.originY + event.clientY - drag.pointerY, 0, container.clientHeight - element.offsetHeight),
+      x: clamp(
+        drag.originX + event.clientX - drag.pointerX,
+        0,
+        container.clientWidth - element.offsetWidth
+      ),
+      y: clamp(
+        drag.originY + event.clientY - drag.pointerY,
+        0,
+        container.clientHeight - element.offsetHeight
+      ),
     });
   }
 

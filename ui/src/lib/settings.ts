@@ -41,7 +41,9 @@ export interface WorkspaceSettings extends AppearanceSettings {
 }
 
 function detectLocale(): Locale {
-  return typeof navigator !== 'undefined' && navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+  return typeof navigator !== 'undefined' && navigator.language.toLowerCase().startsWith('zh')
+    ? 'zh'
+    : 'en';
 }
 
 export function createDefaultSettings(): WorkspaceSettings {
@@ -67,7 +69,9 @@ function pickOption<T extends string>(value: unknown, options: readonly T[], fal
 }
 
 function pickNumber(value: unknown, min: number, max: number, fallback: number): number {
-  return typeof value === 'number' && Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : fallback;
+  return typeof value === 'number' && Number.isFinite(value)
+    ? Math.min(max, Math.max(min, value))
+    : fallback;
 }
 
 function pickBoolean(value: unknown, fallback: boolean): boolean {
@@ -90,19 +94,33 @@ export function normalizeSettings(raw: unknown): WorkspaceSettings {
   }
 
   return {
-    locale: pickOption(source.locale, LOCALES.map((item) => item.id), defaults.locale),
-    themeId: pickOption(source.themeId, THEMES.map((theme) => theme.id) as ThemeId[], defaults.themeId),
+    locale: pickOption(
+      source.locale,
+      LOCALES.map((item) => item.id),
+      defaults.locale
+    ),
+    themeId: pickOption(
+      source.themeId,
+      THEMES.map((theme) => theme.id) as ThemeId[],
+      defaults.themeId
+    ),
     accent:
-      typeof source.accent === 'string' && /^#[0-9a-fA-F]{6}$/.test(source.accent) ? source.accent : null,
+      typeof source.accent === 'string' && /^#[0-9a-fA-F]{6}$/.test(source.accent)
+        ? source.accent
+        : null,
     opacity: Math.round(pickNumber(source.opacity, 70, 100, defaults.opacity)),
     blur: Math.round(pickNumber(source.blur, 0, 40, defaults.blur)),
     cloudSync: pickBoolean(source.cloudSync, defaults.cloudSync),
     resolutionId: pickOption(
       source.resolutionId,
       RESOLUTION_PRESETS.map((preset) => preset.id),
-      defaults.resolutionId,
+      defaults.resolutionId
     ),
-    layoutId: pickOption(source.layoutId, LAYOUTS.map((layout) => layout.id), defaults.layoutId),
+    layoutId: pickOption(
+      source.layoutId,
+      LAYOUTS.map((layout) => layout.id),
+      defaults.layoutId
+    ),
     activeModels: activeModels.length > 0 ? activeModels : defaults.activeModels,
     railCollapsed: pickBoolean(source.railCollapsed, defaults.railCollapsed),
     dockMode: pickOption(source.dockMode, ['docked', 'floating'] as const, defaults.dockMode),

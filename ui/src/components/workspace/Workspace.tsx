@@ -1,6 +1,12 @@
 import { useRef, useState, type CSSProperties } from 'react';
 import { getThemeStyle } from '@/lib/themes';
-import { AI_MODELS, LAYOUTS, MAX_ACTIVE_MODELS, RESOLUTION_PRESETS, type ModelId } from '@/lib/workspaceConfig';
+import {
+  AI_MODELS,
+  LAYOUTS,
+  MAX_ACTIVE_MODELS,
+  RESOLUTION_PRESETS,
+  type ModelId,
+} from '@/lib/workspaceConfig';
 import { useSettings } from '@/contexts/settingsContext';
 import { useShortcutListener } from '@/hooks/useShortcutListener';
 import { formatAllViewportsMarkdown, downloadMarkdownFile } from '@/lib/markdownExport';
@@ -22,14 +28,16 @@ export function Workspace() {
   const promptRef = useRef<HTMLTextAreaElement>(null);
 
   const layout = LAYOUTS.find((item) => item.id === settings.layoutId) ?? LAYOUTS[0];
-  const resolution = RESOLUTION_PRESETS.find((item) => item.id === settings.resolutionId) ?? RESOLUTION_PRESETS[0];
+  const resolution =
+    RESOLUTION_PRESETS.find((item) => item.id === settings.resolutionId) ?? RESOLUTION_PRESETS[0];
   const models = AI_MODELS.filter((model) => settings.activeModels.includes(model.id));
   const visibleModels = models.slice(0, layout.capacity);
 
   function toggleModel(id: ModelId) {
     const { activeModels } = settings;
     if (activeModels.includes(id)) {
-      if (activeModels.length > 1) updateSettings({ activeModels: activeModels.filter((item) => item !== id) });
+      if (activeModels.length > 1)
+        updateSettings({ activeModels: activeModels.filter((item) => item !== id) });
       return;
     }
     if (activeModels.length < MAX_ACTIVE_MODELS) {
@@ -69,10 +77,11 @@ export function Workspace() {
       broadcast,
       focusPrompt: () => promptRef.current?.focus(),
       toggleRail: () => updateSettings({ railCollapsed: !settings.railCollapsed }),
-      toggleDock: () => updateSettings({ dockMode: settings.dockMode === 'docked' ? 'floating' : 'docked' }),
+      toggleDock: () =>
+        updateSettings({ dockMode: settings.dockMode === 'docked' ? 'floating' : 'docked' }),
       openSettings: () => setSettingsOpen(true),
     },
-    !settingsOpen,
+    !settingsOpen
   );
 
   const frameStyle: CSSProperties =
@@ -91,7 +100,9 @@ export function Workspace() {
       targetCount={settings.activeModels.length}
       textareaRef={promptRef}
       dockMode={settings.dockMode}
-      onToggleMode={() => updateSettings({ dockMode: settings.dockMode === 'docked' ? 'floating' : 'docked' })}
+      onToggleMode={() =>
+        updateSettings({ dockMode: settings.dockMode === 'docked' ? 'floating' : 'docked' })
+      }
     />
   );
 
@@ -122,7 +133,9 @@ export function Workspace() {
                 <div className="shrink-0 px-3 pb-3 sm:px-4 sm:pb-4">{dock}</div>
               )}
             </div>
-            {settings.dockMode === 'floating' && <FloatingPromptWindow>{dock}</FloatingPromptWindow>}
+            {settings.dockMode === 'floating' && (
+              <FloatingPromptWindow>{dock}</FloatingPromptWindow>
+            )}
             {settings.railCollapsed ? (
               <ControlRail
                 layout={layout}

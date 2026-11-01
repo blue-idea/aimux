@@ -83,7 +83,10 @@ export const LAYOUTS: WorkspaceLayout[] = [
     template: (count) =>
       count <= 1
         ? { columns: '1fr', rows: '1fr' }
-        : { columns: 'minmax(0, 2fr) minmax(0, 1fr)', rows: `repeat(${count - 1}, minmax(0, 1fr))` },
+        : {
+            columns: 'minmax(0, 2fr) minmax(0, 1fr)',
+            rows: `repeat(${count - 1}, minmax(0, 1fr))`,
+          },
     stackedLead: true,
   },
 ];

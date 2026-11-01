@@ -12,12 +12,8 @@ describe('promptOptimizer', () => {
   };
 
   it('should throw an error if the input prompt is empty', async () => {
-    await expect(optimizePrompt('', dummyConfig)).rejects.toThrow(
-      'Prompt text cannot be empty',
-    );
-    await expect(expandPrompt('   ', dummyConfig)).rejects.toThrow(
-      'Prompt text cannot be empty',
-    );
+    await expect(optimizePrompt('', dummyConfig)).rejects.toThrow('Prompt text cannot be empty');
+    await expect(expandPrompt('   ', dummyConfig)).rejects.toThrow('Prompt text cannot be empty');
   });
 
   it('should call completion with optimization prompt and return polished text', async () => {
@@ -32,7 +28,7 @@ describe('promptOptimizer', () => {
     const result = await optimizePrompt(
       'write a python function',
       dummyConfig,
-      mockFetch as unknown as typeof fetch,
+      mockFetch as unknown as typeof fetch
     );
 
     expect(result).toBe('Act as an expert developer...');
@@ -44,20 +40,17 @@ describe('promptOptimizer', () => {
       ok: true,
       status: 200,
       json: async () => ({
-        choices: [
-          { message: { content: 'Detailed background, objectives, and steps...' } },
-        ],
+        choices: [{ message: { content: 'Detailed background, objectives, and steps...' } }],
       }),
     });
 
     const result = await expandPrompt(
       'explain react hooks',
       dummyConfig,
-      mockFetch as unknown as typeof fetch,
+      mockFetch as unknown as typeof fetch
     );
 
     expect(result).toBe('Detailed background, objectives, and steps...');
     expect(mockFetch).toHaveBeenCalled();
   });
 });
-

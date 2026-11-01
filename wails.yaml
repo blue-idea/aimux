@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://v3.wails.io/schemas/wails.v3.json
+version: 3
+project:
+  name: aimux
+  product_name: AIMux
+  identifier: com.aimux.app
+  version: 0.1.0
+frontend:
+  dir: ui
+  install: pnpm install
+  build: pnpm run build

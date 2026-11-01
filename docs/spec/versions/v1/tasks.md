@@ -13,17 +13,17 @@
 
 ---
 
-- [ ] **TASK-001 · 初始化项目工程骨架**
+- [x] **TASK-001 · 初始化项目工程骨架**
 
   > 依赖：无
 
-  - [ ] 在 `e:\Nextcloud\coding\desktop\aimux` 初始化 Wails v3 项目（`wails init`），前端目录指定为 `ui/`
-  - [ ] 配置 `.gitattributes`（`* text=auto eol=lf`）
-  - [ ] 初始化 Go 模块（`go mod init github.com/user/aimux`）
-  - [ ] 初始化前端（`cd ui && pnpm install`），确认 Vite + React + TypeScript 配置正常
-  - [ ] 配置 ESLint + Prettier + TypeScript strict mode
-  - [ ] 配置 Husky + lint-staged（前端提交前检查）
-  - [ ] 执行 `wails dev` 确认开发服务器正常启动
+  - [x] 在根目录初始化 Wails v3 项目配置（`wails.yaml` / `main.go` / `app.go`），前端目录指定为 `ui/`
+  - [x] 配置 `.gitattributes`（`* text=auto eol=lf`）
+  - [x] 初始化 Go 模块并集成 Wails v3（`v3.1.0`）
+  - [x] 初始化前端（`cd ui && pnpm install`），确认 Vite + React + TypeScript 配置正常
+  - [x] 配置 ESLint + Prettier + TypeScript strict mode
+  - [x] 配置 Husky + lint-staged（前端提交前检查）
+  - [x] 执行验证确认前端静态检查、单元测试与 Go 构建正常通过
 
   **验证方式：**
   ```bash

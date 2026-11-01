@@ -41,7 +41,7 @@ function cleanBaseUrl(url: string): string {
  */
 export async function testLlmConnection(
   config: LlmApiConfig,
-  fetchImpl: typeof fetch = fetch,
+  fetchImpl: typeof fetch = fetch
 ): Promise<LlmConnectionResult> {
   const baseUrl = cleanBaseUrl(config.baseUrl);
   const model = config.model.trim();
@@ -147,7 +147,7 @@ export async function testLlmConnection(
 export async function sendChatCompletion(
   config: LlmApiConfig,
   messages: ChatMessage[],
-  fetchImpl: typeof fetch = fetch,
+  fetchImpl: typeof fetch = fetch
 ): Promise<string> {
   const baseUrl = cleanBaseUrl(config.baseUrl);
   const model = config.model.trim();
@@ -227,8 +227,7 @@ export function normalizeLlmConfig(raw: unknown): LlmApiConfig {
     return { ...DEFAULT_LLM_CONFIG };
   }
   const r = raw as Record<string, unknown>;
-  const provider =
-    r.provider === 'ollama' || r.provider === 'custom' ? r.provider : 'openai';
+  const provider = r.provider === 'ollama' || r.provider === 'custom' ? r.provider : 'openai';
   const baseUrl = typeof r.baseUrl === 'string' ? r.baseUrl : DEFAULT_LLM_CONFIG.baseUrl;
   const apiKey = typeof r.apiKey === 'string' ? r.apiKey : '';
   const model = typeof r.model === 'string' ? r.model : DEFAULT_LLM_CONFIG.model;
@@ -270,4 +269,3 @@ export function saveLlmConfig(config: LlmApiConfig): void {
     // 忽略存储异常
   }
 }
-

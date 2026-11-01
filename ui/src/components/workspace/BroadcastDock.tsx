@@ -1,5 +1,13 @@
 import { useState, type RefObject } from 'react';
-import { Eraser, Loader2, Maximize2, PanelBottom, PictureInPicture2, Send, Sparkles } from 'lucide-react';
+import {
+  Eraser,
+  Loader2,
+  Maximize2,
+  PanelBottom,
+  PictureInPicture2,
+  Send,
+  Sparkles,
+} from 'lucide-react';
 import { useSettings } from '@/contexts/settingsContext';
 import type { DockMode } from '@/lib/settings';
 import { loadLlmConfig } from '@/lib/llmApi';

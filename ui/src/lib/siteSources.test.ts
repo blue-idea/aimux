@@ -41,7 +41,7 @@ describe('siteSources', () => {
         name: '',
         url: 'http://localhost:8080',
         color: '#00AAFF',
-      }),
+      })
     ).toThrow('Source name and URL are required');
   });
 
@@ -71,7 +71,7 @@ describe('siteSources', () => {
 
     // Deleting built-in source throws error
     expect(() => deleteSiteSource(initial, 'chatgpt')).toThrow(
-      'Cannot delete built-in site source',
+      'Cannot delete built-in site source'
     );
   });
 
@@ -83,12 +83,25 @@ describe('siteSources', () => {
 
   it('should filter enabled site sources correctly', () => {
     const mixed: AiSiteSource[] = [
-      { id: 's1', name: 'S1', url: 'https://s1.com', color: '#111', enabled: true, isCustom: false },
-      { id: 's2', name: 'S2', url: 'https://s2.com', color: '#222', enabled: false, isCustom: false },
+      {
+        id: 's1',
+        name: 'S1',
+        url: 'https://s1.com',
+        color: '#111',
+        enabled: true,
+        isCustom: false,
+      },
+      {
+        id: 's2',
+        name: 'S2',
+        url: 'https://s2.com',
+        color: '#222',
+        enabled: false,
+        isCustom: false,
+      },
     ];
     const enabled = getEnabledSiteSources(mixed);
     expect(enabled.length).toBe(1);
     expect(enabled[0].id).toBe('s1');
   });
 });
-

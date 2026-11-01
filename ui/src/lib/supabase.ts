@@ -23,5 +23,5 @@ export const supabase = createClient(
     global: {
       headers: { 'x-device-id': getDeviceId() },
     },
-  },
+  }
 );

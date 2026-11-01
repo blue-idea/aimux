@@ -3,7 +3,11 @@ import { SHORTCUT_IDS, comboFromEvent, type ShortcutId, type Shortcuts } from '@
 
 type ShortcutHandlers = Partial<Record<ShortcutId, () => void>>;
 
-export function useShortcutListener(shortcuts: Shortcuts, handlers: ShortcutHandlers, enabled: boolean) {
+export function useShortcutListener(
+  shortcuts: Shortcuts,
+  handlers: ShortcutHandlers,
+  enabled: boolean
+) {
   useEffect(() => {
     if (!enabled) return;
 

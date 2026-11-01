@@ -62,7 +62,8 @@ const en = {
   'settings.tab.shortcuts': 'Shortcuts',
   'settings.language': 'Language',
   'settings.cloud': 'Cloud sync',
-  'settings.cloudDesc': 'Keep your settings in the cloud so this browser restores them after reloads.',
+  'settings.cloudDesc':
+    'Keep your settings in the cloud so this browser restores them after reloads.',
   'settings.cloudStatus.off': 'Cloud sync is off. Settings stay on this device.',
   'settings.cloudStatus.idle': 'Settings are ready to sync.',
   'settings.cloudStatus.saving': 'Saving to the cloud...',
@@ -71,7 +72,8 @@ const en = {
   'settings.shortcuts.help': 'Click a shortcut, then press the new keys. Press Esc to cancel.',
   'settings.shortcuts.recording': 'Press keys...',
   'settings.shortcuts.unset': 'Not set',
-  'settings.shortcuts.needModifier': 'Include Ctrl, Alt, or Meta so the shortcut does not clash with typing.',
+  'settings.shortcuts.needModifier':
+    'Include Ctrl, Alt, or Meta so the shortcut does not clash with typing.',
   'settings.shortcuts.reset': 'Restore defaults',
   'shortcut.broadcast': 'Broadcast prompt',
   'shortcut.focusPrompt': 'Focus prompt box',
@@ -164,11 +166,11 @@ const dictionaries: Record<Locale, Record<MessageKey, string>> = { en, zh };
 export function translate(
   locale: Locale,
   key: MessageKey,
-  params?: Record<string, string | number>,
+  params?: Record<string, string | number>
 ): string {
   const template = dictionaries[locale][key];
   if (!params) return template;
   return template.replace(/\{(\w+)\}/g, (match, name: string) =>
-    name in params ? String(params[name]) : match,
+    name in params ? String(params[name]) : match
   );
 }

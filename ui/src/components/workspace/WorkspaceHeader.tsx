@@ -46,7 +46,11 @@ export function WorkspaceHeader({
           className="max-w-[240px] cursor-pointer truncate rounded-md bg-[rgb(var(--ink-rgb)/0.06)] px-2.5 py-1 text-xs text-[var(--text)] outline-none transition duration-150 hover:bg-[rgb(var(--ink-rgb)/0.1)] focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
         >
           {RESOLUTION_PRESETS.map((preset) => (
-            <option key={preset.id} value={preset.id} className="bg-[rgb(var(--surface-rgb))] text-[var(--text)]">
+            <option
+              key={preset.id}
+              value={preset.id}
+              className="bg-[rgb(var(--surface-rgb))] text-[var(--text)]"
+            >
               {t(preset.labelKey)}
             </option>
           ))}
@@ -95,7 +99,11 @@ export function WorkspaceHeader({
           onClick={onToggleRail}
           className={`${iconButton} text-[var(--muted)] hover:bg-[rgb(var(--ink-rgb)/0.08)] hover:text-[var(--text)]`}
         >
-          {railCollapsed ? <PanelRight className="h-4 w-4" /> : <PanelRightClose className="h-4 w-4" />}
+          {railCollapsed ? (
+            <PanelRight className="h-4 w-4" />
+          ) : (
+            <PanelRightClose className="h-4 w-4" />
+          )}
         </button>
         <button
           type="button"

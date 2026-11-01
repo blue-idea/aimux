@@ -1,0 +1,1 @@
+cd ui && pnpm run lint && pnpm run typecheck

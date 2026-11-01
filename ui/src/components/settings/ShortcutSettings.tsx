@@ -2,7 +2,13 @@ import { useEffect, useState } from 'react';
 import { RotateCcw } from 'lucide-react';
 import { useSettings } from '@/contexts/settingsContext';
 import type { MessageKey } from '@/lib/i18n';
-import { comboFromEvent, DEFAULT_SHORTCUTS, hasModifier, SHORTCUT_IDS, type ShortcutId } from '@/lib/settings';
+import {
+  comboFromEvent,
+  DEFAULT_SHORTCUTS,
+  hasModifier,
+  SHORTCUT_IDS,
+  type ShortcutId,
+} from '@/lib/settings';
 import { SettingSection } from './SettingsControls';
 
 const SHORTCUT_LABEL_KEYS: Record<ShortcutId, MessageKey> = {
@@ -79,7 +85,9 @@ export function ShortcutSettings() {
                     : 'border-[rgb(var(--ink-rgb)/0.15)] bg-[rgb(var(--ink-rgb)/0.06)] text-[var(--text)] hover:border-[var(--accent)]'
                 }`}
               >
-                {isRecording ? t('settings.shortcuts.recording') : combo || t('settings.shortcuts.unset')}
+                {isRecording
+                  ? t('settings.shortcuts.recording')
+                  : combo || t('settings.shortcuts.unset')}
               </button>
             </li>
           );

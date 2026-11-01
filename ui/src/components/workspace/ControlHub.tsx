@@ -1,7 +1,13 @@
 import type { ReactNode } from 'react';
 import { Check, Settings } from 'lucide-react';
 import { useSettings } from '@/contexts/settingsContext';
-import { AI_MODELS, LAYOUTS, MAX_ACTIVE_MODELS, type ModelId, type WorkspaceLayout } from '@/lib/workspaceConfig';
+import {
+  AI_MODELS,
+  LAYOUTS,
+  MAX_ACTIVE_MODELS,
+  type ModelId,
+  type WorkspaceLayout,
+} from '@/lib/workspaceConfig';
 
 interface ControlHubProps {
   layout: WorkspaceLayout;
@@ -11,7 +17,13 @@ interface ControlHubProps {
   onOpenSettings: () => void;
 }
 
-export function ControlHub({ layout, onLayout, activeModels, onToggleModel, onOpenSettings }: ControlHubProps) {
+export function ControlHub({
+  layout,
+  onLayout,
+  activeModels,
+  onToggleModel,
+  onOpenSettings,
+}: ControlHubProps) {
   const { t } = useSettings();
 
   return (
@@ -42,7 +54,10 @@ export function ControlHub({ layout, onLayout, activeModels, onToggleModel, onOp
           </div>
         </Section>
 
-        <Section title={t('hub.models')} hint={t('hub.modelCount', { count: activeModels.length, max: MAX_ACTIVE_MODELS })}>
+        <Section
+          title={t('hub.models')}
+          hint={t('hub.modelCount', { count: activeModels.length, max: MAX_ACTIVE_MODELS })}
+        >
           <ul className="space-y-1">
             {AI_MODELS.map((model) => {
               const checked = activeModels.includes(model.id);
@@ -56,7 +71,10 @@ export function ControlHub({ layout, onLayout, activeModels, onToggleModel, onOp
                     onClick={() => onToggleModel(model.id)}
                     className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-sm transition duration-150 hover:bg-[rgb(var(--ink-rgb)/0.06)] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
                   >
-                    <span className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: model.color }} />
+                    <span
+                      className="h-2 w-2 shrink-0 rounded-full"
+                      style={{ backgroundColor: model.color }}
+                    />
                     <span className="flex-1">{model.name}</span>
                     <span
                       className={`flex h-4 w-4 items-center justify-center rounded border transition duration-150 ${
@@ -99,7 +117,9 @@ function Section({ title, hint, children }: SectionProps) {
   return (
     <section className="space-y-3">
       <div className="flex items-center justify-between">
-        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-[var(--muted)]">{title}</h2>
+        <h2 className="text-[11px] font-semibold uppercase tracking-wider text-[var(--muted)]">
+          {title}
+        </h2>
         {hint && <span className="text-[11px] tabular-nums text-[var(--muted)]">{hint}</span>}
       </div>
       {children}

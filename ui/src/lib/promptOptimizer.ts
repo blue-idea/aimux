@@ -21,7 +21,7 @@ Rules:
 export async function optimizePrompt(
   promptText: string,
   config: LlmApiConfig,
-  fetchImpl: typeof fetch = fetch,
+  fetchImpl: typeof fetch = fetch
 ): Promise<string> {
   const trimmed = promptText.trim();
   if (!trimmed) {
@@ -43,7 +43,7 @@ export async function optimizePrompt(
 export async function expandPrompt(
   promptText: string,
   config: LlmApiConfig,
-  fetchImpl: typeof fetch = fetch,
+  fetchImpl: typeof fetch = fetch
 ): Promise<string> {
   const trimmed = promptText.trim();
   if (!trimmed) {
@@ -58,4 +58,3 @@ export async function expandPrompt(
   const result = await sendChatCompletion(config, messages, fetchImpl);
   return result.trim();
 }
-

@@ -28,4 +28,3 @@ describe('antiFolding', () => {
     expect(formatZoomPercentage(0.75)).toBe(75);
   });
 });
-

@@ -1,6 +1,12 @@
 import { PanelRight, Settings } from 'lucide-react';
 import { useSettings } from '@/contexts/settingsContext';
-import { AI_MODELS, LAYOUTS, MAX_ACTIVE_MODELS, type ModelId, type WorkspaceLayout } from '@/lib/workspaceConfig';
+import {
+  AI_MODELS,
+  LAYOUTS,
+  MAX_ACTIVE_MODELS,
+  type ModelId,
+  type WorkspaceLayout,
+} from '@/lib/workspaceConfig';
 
 interface ControlRailProps {
   layout: WorkspaceLayout;

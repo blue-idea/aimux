@@ -66,7 +66,7 @@ const SITE_SOURCES_STORAGE_KEY = 'aimux_site_sources';
  */
 export function addCustomSiteSource(
   sources: AiSiteSource[],
-  input: { name: string; url: string; color?: string; notes?: string },
+  input: { name: string; url: string; color?: string; notes?: string }
 ): AiSiteSource {
   const name = input.name.trim();
   const url = input.url.trim();
@@ -96,7 +96,7 @@ export function addCustomSiteSource(
 export function updateSiteSource(
   sources: AiSiteSource[],
   id: string,
-  updates: Partial<Omit<AiSiteSource, 'id' | 'isCustom'>>,
+  updates: Partial<Omit<AiSiteSource, 'id' | 'isCustom'>>
 ): AiSiteSource[] {
   return sources.map((source) => {
     if (source.id === id) {
@@ -201,4 +201,3 @@ export function saveSiteSources(sources: AiSiteSource[]): void {
     // 忽略存储异常
   }
 }
-

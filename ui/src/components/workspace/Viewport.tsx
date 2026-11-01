@@ -42,11 +42,16 @@ export function Viewport({ model, messages, onClear, style }: ViewportProps) {
     >
       <div className="flex h-7 shrink-0 items-center justify-between gap-2 border-b border-[rgb(var(--ink-rgb)/0.08)] px-2.5">
         <div className="flex min-w-0 items-center gap-2">
-          <span className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: model.color }} />
+          <span
+            className="h-2 w-2 shrink-0 rounded-full"
+            style={{ backgroundColor: model.color }}
+          />
           <span className="truncate text-xs font-medium">{model.name}</span>
         </div>
         <div className="flex shrink-0 items-center gap-1.5">
-          <span className="text-[11px] tabular-nums text-[var(--muted)]">{t('viewport.zoom', { zoom })}</span>
+          <span className="text-[11px] tabular-nums text-[var(--muted)]">
+            {t('viewport.zoom', { zoom })}
+          </span>
           <button
             type="button"
             title={`Export ${model.name} to Markdown`}
@@ -77,7 +82,10 @@ export function Viewport({ model, messages, onClear, style }: ViewportProps) {
       <div ref={bodyRef} className="flex min-h-0 flex-1 flex-col overflow-y-auto p-3">
         {messages.length === 0 ? (
           <div className="m-auto text-center">
-            <div className="mx-auto mb-3 h-8 w-8 rounded-xl" style={{ backgroundColor: model.color }} />
+            <div
+              className="mx-auto mb-3 h-8 w-8 rounded-xl"
+              style={{ backgroundColor: model.color }}
+            />
             <p className="text-sm font-medium">{t('viewport.ready', { name: model.name })}</p>
             <p className="mt-1 text-xs text-[var(--muted)]">{t('viewport.empty')}</p>
           </div>

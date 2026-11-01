@@ -10,7 +10,7 @@ export const MAX_ZOOM_FACTOR = 1.0;
 export function calculateDynamicZoom(
   width: number,
   breakpoint = DESKTOP_BREAKPOINT_WIDTH,
-  minZoom = MIN_ZOOM_FACTOR,
+  minZoom = MIN_ZOOM_FACTOR
 ): number {
   if (width <= 0) {
     return MAX_ZOOM_FACTOR;
@@ -28,4 +28,3 @@ export function calculateDynamicZoom(
 export function formatZoomPercentage(zoomFactor: number): number {
   return Math.round(zoomFactor * 100);
 }
-

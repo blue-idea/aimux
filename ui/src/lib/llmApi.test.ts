@@ -54,7 +54,7 @@ describe('llmApi', () => {
         headers: expect.objectContaining({
           Authorization: 'Bearer sk-test',
         }),
-      }),
+      })
     );
   });
 
@@ -99,7 +99,7 @@ describe('llmApi', () => {
     const reply = await sendChatCompletion(
       config,
       [{ role: 'user', content: 'hello' }],
-      mockFetch as unknown as typeof fetch,
+      mockFetch as unknown as typeof fetch
     );
 
     expect(reply).toBe('Optimized response text');
@@ -125,7 +125,7 @@ describe('llmApi', () => {
     const reply = await sendChatCompletion(
       config,
       [{ role: 'user', content: 'test local' }],
-      mockFetch as unknown as typeof fetch,
+      mockFetch as unknown as typeof fetch
     );
 
     expect(reply).toBe('ollama response');
@@ -133,8 +133,7 @@ describe('llmApi', () => {
       'http://localhost:11434/api/chat',
       expect.objectContaining({
         method: 'POST',
-      }),
+      })
     );
   });
 });
-
