@@ -42,4 +42,17 @@ const (
 	DefaultRightBarWidth   = 260
 	DefaultBottomBarHeight = 90
 	DefaultEnableAutoZoom  = true
+	DefaultLRUCacheLimit   = 10
+	DefaultMainSubSplitRatio = 0.65
+)
+
+// 支持的布局模式常量定义
+const (
+	LayoutSingle    = "single"
+	LayoutDual      = "dual"
+	LayoutDouble    = "double" // dual 的兼容别名
+	LayoutGrid      = "grid"
+	LayoutGrid4     = "grid4"  // grid 的兼容别名
+	LayoutUltrawide = "ultrawide"
+	LayoutMainSub   = "main-sub"
 )

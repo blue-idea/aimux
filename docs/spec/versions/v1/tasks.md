@@ -112,16 +112,16 @@
 
 ---
 
-- [ ] **TASK-005 · Go 窗口管理器（WindowManager）**
+- [x] **TASK-005 · Go 窗口管理器（WindowManager）**
 
   > 依赖：TASK-003
 
-  - [ ] 创建 `app/window/manager.go`：Shell/Spotlight/Detached 窗口生命周期管理
-  - [ ] 实现 `SetLayout(layout string) error`：布局模式切换，计算子窗口 Bounds
-  - [ ] 实现 `SetViewportBounds(id string, bounds Rect) error`：下发物理像素坐标给 WebView 子窗口
-  - [ ] 实现 `DetachViewport(id string) error`：视口分离为独立窗口
-  - [ ] 实现 LRU Show/Hide 缓存（10 Tab 后挂起最旧窗口）
-  - [ ] **先写测试**：Layout 计算、LRU 策略的单元测试
+  - [x] 创建 `app/window/manager.go`：Shell/Spotlight/Detached 窗口生命周期管理
+  - [x] 实现 `SetLayout(layout string) error`：布局模式切换，计算子窗口 Bounds
+  - [x] 实现 `SetViewportBounds(id string, bounds Rect) error`：下发物理像素坐标给 WebView 子窗口
+  - [x] 实现 `DetachViewport(id string) error`：视口分离为独立窗口
+  - [x] 实现 LRU Show/Hide 缓存（10 Tab 后挂起最旧窗口）
+  - [x] **先写测试**：Layout 计算、LRU 策略的单元测试
 
   **验证方式：**
   ```bash
@@ -581,7 +581,7 @@
 | TASK-002 | SQLite 数据库层初始化 | Unit | ✅ 已完成 | REQ-001, REQ-011 |
 | TASK-003 | 应用配置读写模块 | Unit | ✅ 已完成 | REQ-009, REQ-010 |
 | TASK-004 | 自适应 Zoom 算法 | Unit | ✅ 已完成 | REQ-002 |
-| TASK-005 | Go 窗口管理器 | Unit+E2E | ⬜ 待开始 | REQ-002 |
+| TASK-005 | Go 窗口管理器 | Unit+E2E | ✅ 已完成 | REQ-002 |
 | TASK-006 | 前端布局 UI | E2E | ⬜ 待开始 | REQ-002 |
 | TASK-007 | 全局快捷键管理器 | Unit+Manual | ⬜ 待开始 | REQ-003 |
 | TASK-008 | Spotlight 悬浮窗 | E2E+Manual | ⬜ 待开始 | REQ-003 |
