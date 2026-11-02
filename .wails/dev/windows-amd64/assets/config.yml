@@ -1,0 +1,10 @@
+ios:
+    backgroundModes: []
+info:
+    companyName: ""
+    productName: AIMux
+    productIdentifier: com.aimux.app
+    description: ""
+    copyright: ""
+    comments: ""
+    version: 0.1.0

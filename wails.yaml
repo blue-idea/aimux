@@ -6,6 +6,8 @@ project:
   identifier: com.aimux.app
   version: 0.1.0
 frontend:
-  dir: ui
-  install: pnpm install
-  build: pnpm run build
+  directory: ui
+  install: [pnpm, install]
+  build: [pnpm, run, build]
+  dev: [pnpm, run, dev]
+  output: ui/dist

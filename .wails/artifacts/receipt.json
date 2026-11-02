@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "artifacts": [
+    {
+      "producer": "target:windows/amd64:compile",
+      "path": ".wails/dev/windows-amd64/aimux.exe",
+      "digest": "sha256:2c7b25fd194e38ac315398252cf04078275e589e47605244deec06bd8e71303c",
+      "size": 23321088,
+      "kind": "binary",
+      "target": "windows/amd64",
+      "signed": false,
+      "notarized": false
+    }
+  ]
+}
