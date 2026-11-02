@@ -15,7 +15,7 @@
 | TASK-004 | 自适应 Zoom 算法 | REQ-002 | REQ-002-AC-003 | Unit | ✅ 已完成 |
 | TASK-005 | Go 窗口管理器 | REQ-002 | REQ-002-AC-001, REQ-002-AC-002, REQ-002-AC-004 | Unit+E2E | ✅ 已完成 |
 | TASK-006 | 前端布局 UI | REQ-002 | REQ-002-AC-001, REQ-002-AC-002 | E2E | ✅ 已完成 |
-| TASK-007 | 全局快捷键管理器 | REQ-003 | REQ-003-AC-001, REQ-003-AC-003, REQ-003-AC-004 | Unit+Manual | ⬜ 待开始 |
+| TASK-007 | 全局快捷键管理器 | REQ-003 | REQ-003-AC-001, REQ-003-AC-003, REQ-003-AC-004 | Unit+Manual | ✅ 已完成 |
 | TASK-008 | Spotlight 悬浮窗 | REQ-003 | REQ-003-AC-001 | E2E+Manual | ⬜ 待开始 |
 | TASK-009 | AI 站点书签 CRUD | REQ-001 | REQ-001-AC-001~005 | Unit | ⬜ 待开始 |
 | TASK-010 | AI 站点管理 UI | REQ-001 | REQ-001-AC-001~004 | E2E | ⬜ 待开始 |

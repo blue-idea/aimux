@@ -46,6 +46,20 @@ const (
 	DefaultMainSubSplitRatio = 0.65
 )
 
+// 快捷键 Action 常量定义
+const (
+	ActionGlobalSpotlight     = "globalSpotlight"
+	ActionGlobalToggleMain    = "globalToggleMain"
+	ActionGlobalSendClipboard = "globalSendClipboard"
+	ActionSwitchLayout1       = "switchLayout1"
+	ActionSwitchLayout2       = "switchLayout2"
+	ActionSwitchLayout4       = "switchLayout4"
+	ActionSwitchLayout1x4     = "switchLayout1x4"
+	ActionBroadcastSend       = "broadcastSend"
+	ActionToggleDrawer        = "toggleDrawer"
+	ActionOpenSettings        = "openSettings"
+)
+
 // 支持的布局模式常量定义
 const (
 	LayoutSingle    = "single"

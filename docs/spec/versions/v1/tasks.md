@@ -162,15 +162,15 @@
 
 ---
 
-- [ ] **TASK-007 · Go 全局快捷键管理器**
+- [x] **TASK-007 · Go 全局快捷键管理器**
 
   > 依赖：TASK-005
 
-  - [ ] 创建 `app/hotkey/manager.go`：跨平台全局热键注册（Windows: Win32 `RegisterHotKey` / macOS: Carbon HotKey）
-  - [ ] 实现 `app/hotkey/conflict.go`：注册失败时返回冲突信息和建议降级组合键
-  - [ ] 暴露 Wails Binding：`RegisterHotkey(action, combo string) HotkeyResult`
-  - [ ] 注册成功后触发 Wails 事件 `hotkey:triggered` 通知前端
-  - [ ] **先写测试**：冲突检测逻辑的单元测试（Mock Win32 调用）
+  - [x] 创建 `app/hotkey/manager.go`：跨平台全局热键注册（Windows: Win32 `RegisterHotKey` / macOS: Carbon HotKey）
+  - [x] 实现 `app/hotkey/conflict.go`：注册失败时返回冲突信息和建议降级组合键
+  - [x] 暴露 Wails Binding：`RegisterHotkey(action, combo string) HotkeyResult`
+  - [x] 注册成功后触发 Wails 事件 `hotkey:triggered` 通知前端
+  - [x] **先写测试**：冲突检测逻辑的单元测试（Mock Win32 调用）
 
   **验证方式：**
   ```bash
@@ -583,7 +583,7 @@
 | TASK-004 | 自适应 Zoom 算法 | Unit | ✅ 已完成 | REQ-002 |
 | TASK-005 | Go 窗口管理器 | Unit+E2E | ✅ 已完成 | REQ-002 |
 | TASK-006 | 前端布局 UI | E2E | ✅ 已完成 | REQ-002 |
-| TASK-007 | 全局快捷键管理器 | Unit+Manual | ⬜ 待开始 | REQ-003 |
+| TASK-007 | 全局快捷键管理器 | Unit+Manual | ✅ 已完成 | REQ-003 |
 | TASK-008 | Spotlight 悬浮窗 | E2E+Manual | ⬜ 待开始 | REQ-003 |
 | TASK-009 | AI 站点书签 CRUD | Unit | ⬜ 待开始 | REQ-001 |
 | TASK-010 | AI 站点管理 UI | E2E | ⬜ 待开始 | REQ-001 |
