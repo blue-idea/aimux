@@ -135,15 +135,15 @@
 
 ---
 
-- [ ] **TASK-006 · 前端布局 UI（主工作台框架）**
+- [x] **TASK-006 · 前端布局 UI（主工作台框架）**
 
   > 依赖：TASK-004, TASK-005
 
-  - [ ] 创建无边框 Glassmorphic 外壳（Header + 右侧控制栏 + 底栏 Dock + 主内容区）
-  - [ ] 实现布局切换控件（5 种布局图标按钮）
-  - [ ] 实现 Splitter 拖拽组件（`ui/src/components/Layout/Splitter.tsx`）
-  - [ ] 前端监听窗口 resize，重新计算 Bounds 并调用 `SetViewportBounds` Wails API
-  - [ ] 实现 `useViewportStore`（Zustand）管理活跃视口列表和布局状态
+  - [x] 创建无边框 Glassmorphic 外壳（Header + 右侧控制栏 + 底栏 Dock + 主内容区）
+  - [x] 实现布局切换控件（5 种布局图标按钮）
+  - [x] 实现 Splitter 拖拽组件（`ui/src/components/Layout/Splitter.tsx`）
+  - [x] 前端监听窗口 resize，重新计算 Bounds 并调用 `SetViewportBounds` Wails API
+  - [x] 实现 `useViewportStore`（Zustand）管理活跃视口列表和布局状态
 
   **验证方式：**
   ```bash
@@ -582,7 +582,7 @@
 | TASK-003 | 应用配置读写模块 | Unit | ✅ 已完成 | REQ-009, REQ-010 |
 | TASK-004 | 自适应 Zoom 算法 | Unit | ✅ 已完成 | REQ-002 |
 | TASK-005 | Go 窗口管理器 | Unit+E2E | ✅ 已完成 | REQ-002 |
-| TASK-006 | 前端布局 UI | E2E | ⬜ 待开始 | REQ-002 |
+| TASK-006 | 前端布局 UI | E2E | ✅ 已完成 | REQ-002 |
 | TASK-007 | 全局快捷键管理器 | Unit+Manual | ⬜ 待开始 | REQ-003 |
 | TASK-008 | Spotlight 悬浮窗 | E2E+Manual | ⬜ 待开始 | REQ-003 |
 | TASK-009 | AI 站点书签 CRUD | Unit | ⬜ 待开始 | REQ-001 |

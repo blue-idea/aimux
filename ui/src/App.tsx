@@ -1,10 +1,10 @@
-import { Workspace } from '@/components/workspace/Workspace';
+import { Shell } from '@/components/Layout/Shell';
 import { SettingsProvider } from '@/contexts/SettingsProvider';
 
 function App() {
   return (
     <SettingsProvider>
-      <Workspace />
+      <Shell />
     </SettingsProvider>
   );
 }

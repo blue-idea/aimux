@@ -67,7 +67,8 @@ export function calculateAdaptiveZoom(
 export function computeViewportBounds(
   mode: LayoutMode,
   container: ViewportContainer,
-  count?: number
+  count?: number,
+  splitRatio?: number
 ): Rect[] {
   const { width, height } = container;
 
@@ -82,7 +83,8 @@ export function computeViewportBounds(
     }
 
     case 'dual': {
-      const w1 = Math.floor(width / 2);
+      const ratio = splitRatio && splitRatio > 0 && splitRatio < 1 ? splitRatio : 0.5;
+      const w1 = Math.round(width * ratio);
       const w2 = width - w1;
       return [
         { x: 0, y: 0, width: w1, height },
@@ -125,7 +127,8 @@ export function computeViewportBounds(
 
     case 'main-sub': {
       const totalCount = count && count > 1 ? count : 2;
-      const mainWidth = Math.round(width * DEFAULT_MAIN_SUB_SPLIT_RATIO);
+      const ratio = splitRatio && splitRatio > 0 && splitRatio < 1 ? splitRatio : DEFAULT_MAIN_SUB_SPLIT_RATIO;
+      const mainWidth = Math.round(width * ratio);
       const subWidth = width - mainWidth;
       const subCount = totalCount - 1;
 
