@@ -90,14 +90,14 @@
 
 ---
 
-- [ ] **TASK-004 · 自适应 Zoom 算法实现**
+- [x] **TASK-004 · 自适应 Zoom 算法实现**
 
   > 依赖：TASK-001
 
-  - [ ] 创建 `ui/src/utils/viewport.ts`：实现 `calculateAdaptiveZoom(width, breakpoint)` 函数
-  - [ ] 创建 `ui/src/config/viewport.ts`：`DEFAULT_ZOOM_BREAKPOINT = 850`, `MIN_ZOOM = 0.75`
-  - [ ] **先写测试**：`ui/src/utils/viewport.test.ts`，覆盖边界值（width=850, 849, 600, 300）
-  - [ ] 实现 `computeViewportBounds`：根据布局模式和可用尺寸计算各视口 Rect
+  - [x] 创建 `ui/src/config/viewport.ts`：`DEFAULT_ZOOM_BREAKPOINT = 850`, `MIN_ZOOM = 0.75`
+  - [x] **先写测试**：`ui/src/utils/viewport.test.ts`，覆盖边界值（width=850, 849, 600, 300）
+  - [x] 创建 `ui/src/utils/viewport.ts`：实现 `calculateAdaptiveZoom(width, breakpoint)` 函数
+  - [x] 实现 `computeViewportBounds`：根据布局模式和可用尺寸计算各视口 Rect
 
   **验证方式：**
   ```bash
@@ -577,10 +577,10 @@
 
 | TASK ID | 名称 | 测试类型 | 状态 | 关联需求 |
 |---------|------|:-------:|:----:|---------:|
-| TASK-001 | 初始化项目工程骨架 | Manual | ⬜ 待开始 | 无 |
-| TASK-002 | SQLite 数据库层初始化 | Unit | ⬜ 待开始 | REQ-001, REQ-011 |
-| TASK-003 | 应用配置读写模块 | Unit | ⬜ 待开始 | REQ-009, REQ-010 |
-| TASK-004 | 自适应 Zoom 算法 | Unit | ⬜ 待开始 | REQ-002 |
+| TASK-001 | 初始化项目工程骨架 | Manual | ✅ 已完成 | 无 |
+| TASK-002 | SQLite 数据库层初始化 | Unit | ✅ 已完成 | REQ-001, REQ-011 |
+| TASK-003 | 应用配置读写模块 | Unit | ✅ 已完成 | REQ-009, REQ-010 |
+| TASK-004 | 自适应 Zoom 算法 | Unit | ✅ 已完成 | REQ-002 |
 | TASK-005 | Go 窗口管理器 | Unit+E2E | ⬜ 待开始 | REQ-002 |
 | TASK-006 | 前端布局 UI | E2E | ⬜ 待开始 | REQ-002 |
 | TASK-007 | 全局快捷键管理器 | Unit+Manual | ⬜ 待开始 | REQ-003 |
