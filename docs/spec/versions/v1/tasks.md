@@ -65,14 +65,14 @@
 
 ---
 
-- [ ] **TASK-003 · 应用配置读写模块**
+- [x] **TASK-003 · 应用配置读写模块**
 
   > 依赖：TASK-001
 
-  - [ ] 创建 `config/paths.go`：获取 `%APPDATA%/AIMux/` 路径（跨平台）
-  - [ ] 创建 `config/defaults.go`：默认窗口尺寸、Zoom 阈值、默认主题等常量
-  - [ ] 实现 `app/storage/config.go`：`LoadConfig() AppConfig` 和 `SaveConfig(AppConfig) error`（JSON 序列化）
-  - [ ] **先写测试**：config 读写的单元测试，覆盖默认值填充场景
+  - [x] 创建 `config/paths.go`：获取 `%APPDATA%/AIMux/` 路径（跨平台）
+  - [x] 创建 `config/defaults.go`：默认窗口尺寸、Zoom 阈值、默认主题等常量
+  - [x] 实现 `app/storage/config.go`：`LoadConfig() AppConfig` 和 `SaveConfig(AppConfig) error`（JSON 序列化）
+  - [x] **先写测试**：config 读写的单元测试，覆盖默认值填充场景
 
   **验证方式：**
   ```bash
