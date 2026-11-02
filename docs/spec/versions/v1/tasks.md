@@ -41,16 +41,16 @@
 
 ---
 
-- [ ] **TASK-002 · SQLite 数据库层初始化**
+- [x] **TASK-002 · SQLite 数据库层初始化**
 
   > 依赖：TASK-001
 
-  - [ ] 添加 `modernc.org/sqlite` 和 `golang-migrate/migrate` 依赖
-  - [ ] 创建 `app/storage/db.go`：连接管理、WAL 模式、迁移自动执行
-  - [ ] 创建首个迁移文件 `app/storage/migrations/000001_init_schema.up.sql`（bookmarks/prompts/prompts_fts/history 表）
-  - [ ] 为 bookmarks、prompts、history 编写 CRUD 函数
-  - [ ] 为 FTS5 搜索编写 `SearchPrompts(query string) []Prompt` 函数
-  - [ ] **先写测试**：`app/storage/db_test.go` 覆盖 CRUD 和 FTS 搜索（Red → Green → Refactor）
+  - [x] 添加 `modernc.org/sqlite` 和 `golang-migrate/migrate` 依赖
+  - [x] 创建 `app/storage/db.go`：连接管理、WAL 模式、迁移自动执行
+  - [x] 创建首个迁移文件 `app/storage/migrations/000001_init_schema.up.sql`（bookmarks/prompts/prompts_fts/history 表）
+  - [x] 为 bookmarks、prompts、history 编写 CRUD 函数
+  - [x] 为 FTS5 搜索编写 `SearchPrompts(query string) []Prompt` 函数
+  - [x] **先写测试**：`app/storage/db_test.go` 覆盖 CRUD 和 FTS 搜索（Red → Green → Refactor）
 
   **验证方式：**
   ```bash

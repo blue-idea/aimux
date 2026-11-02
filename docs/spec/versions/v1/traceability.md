@@ -10,7 +10,7 @@
 | TASK ID | TASK 名称 | 关联 REQ | 关联 AC | 测试类型 | 状态 |
 |---------|----------|---------|---------|---------|------|
 | TASK-001 | 初始化项目工程骨架 | — | — | Manual | ✅ 已完成 |
-| TASK-002 | SQLite 数据库层初始化 | REQ-001, REQ-011 | REQ-001-AC-001, REQ-011-AC-001, REQ-011-AC-002 | Unit | ⬜ 待开始 |
+| TASK-002 | SQLite 数据库层初始化 | REQ-001, REQ-011 | REQ-001-AC-001, REQ-011-AC-001, REQ-011-AC-002 | Unit | ✅ 已完成 |
 | TASK-003 | 应用配置读写模块 | REQ-009, REQ-010 | REQ-009-AC-001, REQ-010-AC-002 | Unit | ⬜ 待开始 |
 | TASK-004 | 自适应 Zoom 算法 | REQ-002 | REQ-002-AC-003 | Unit | ⬜ 待开始 |
 | TASK-005 | Go 窗口管理器 | REQ-002 | REQ-002-AC-001, REQ-002-AC-002, REQ-002-AC-004 | Unit+E2E | ⬜ 待开始 |
